@@ -1,1 +1,11 @@
-<div>{{title}}</div>
+<div [ngClass]="{'dark-mode': isDarkMode}">
+  <div class="theme-switcher">
+    <button (click)="toggleTheme()">
+      {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+    </button>
+  </div>
+  <div class="content">
+    <h1>Welcome to {{ title }}!</h1>
+    <p>This is a simple demo of dark and light mode in an Angular application.</p>
+  </div>
+</div>
